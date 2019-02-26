@@ -1,1 +1,9 @@
-{"status":"success","message":["chesapeake","curly","flatcoated","golden"]}
+{
+    "status": "success",
+    "message": [
+        "chesapeake",
+        "curly",
+        "flatcoated",
+        "golden"
+    ]
+}
