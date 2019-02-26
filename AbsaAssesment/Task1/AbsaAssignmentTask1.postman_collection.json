@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "489ad49b-03de-432d-adfb-cf9a45988200",
+		"name": "AbsaAssignmentTask1",
+		"description": "Collection for Task1 in ABSA Assignment. API testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RetrieveAllBreeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b27ea551-de3c-4f2b-b371-238e5f57f821",
+						"exec": [
+							"pm.test(\"Respose has a message body\", function () {",
+							"    pm.expect(pm.response.message);",
+							"});",
+							"",
+							"pm.test(\"Verify response contains 'retriever'\", function () {",
+							"    var JsonData = pm.response.json();",
+							"     pm.expect(JsonData.retriever);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dog.ceo/api/breeds/list/all",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"list",
+						"all"
+					]
+				},
+				"description": "Request retrieves all dog breeds and tests if 'Retriever' is included in the response."
+			},
+			"response": [
+				{
+					"name": "RetrieveAllBreeds",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://dog.ceo/api/breeds/list/all",
+							"protocol": "https",
+							"host": [
+								"dog",
+								"ceo"
+							],
+							"path": [
+								"api",
+								"breeds",
+								"list",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 25 Feb 2019 11:30:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.23"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=43200, public"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 varnish (Varnish/6.1), 1.1 varnish (Varnish/6.1)"
+						},
+						{
+							"key": "X-Cache-Hits",
+							"value": "58"
+						},
+						{
+							"key": "X-Cache",
+							"value": "HIT"
+						},
+						{
+							"key": "Age",
+							"value": "36288"
+						},
+						{
+							"key": "Vary",
+							"value": ""
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "4ae9d6bbbfea804c-CPT"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": {\n        \"affenpinscher\": [],\n        \"african\": [],\n        \"airedale\": [],\n        \"akita\": [],\n        \"appenzeller\": [],\n        \"basenji\": [],\n        \"beagle\": [],\n        \"bluetick\": [],\n        \"borzoi\": [],\n        \"bouvier\": [],\n        \"boxer\": [],\n        \"brabancon\": [],\n        \"briard\": [],\n        \"bulldog\": [\n            \"boston\",\n            \"french\"\n        ],\n        \"bullterrier\": [\n            \"staffordshire\"\n        ],\n        \"cairn\": [],\n        \"cattledog\": [\n            \"australian\"\n        ],\n        \"chihuahua\": [],\n        \"chow\": [],\n        \"clumber\": [],\n        \"cockapoo\": [],\n        \"collie\": [\n            \"border\"\n        ],\n        \"coonhound\": [],\n        \"corgi\": [\n            \"cardigan\"\n        ],\n        \"cotondetulear\": [],\n        \"dachshund\": [],\n        \"dalmatian\": [],\n        \"dane\": [\n            \"great\"\n        ],\n        \"deerhound\": [\n            \"scottish\"\n        ],\n        \"dhole\": [],\n        \"dingo\": [],\n        \"doberman\": [],\n        \"elkhound\": [\n            \"norwegian\"\n        ],\n        \"entlebucher\": [],\n        \"eskimo\": [],\n        \"frise\": [\n            \"bichon\"\n        ],\n        \"germanshepherd\": [],\n        \"greyhound\": [\n            \"italian\"\n        ],\n        \"groenendael\": [],\n        \"hound\": [\n            \"afghan\",\n            \"basset\",\n            \"blood\",\n            \"english\",\n            \"ibizan\",\n            \"walker\"\n        ],\n        \"husky\": [],\n        \"keeshond\": [],\n        \"kelpie\": [],\n        \"komondor\": [],\n        \"kuvasz\": [],\n        \"labrador\": [],\n        \"leonberg\": [],\n        \"lhasa\": [],\n        \"malamute\": [],\n        \"malinois\": [],\n        \"maltese\": [],\n        \"mastiff\": [\n            \"bull\",\n            \"english\",\n            \"tibetan\"\n        ],\n        \"mexicanhairless\": [],\n        \"mix\": [],\n        \"mountain\": [\n            \"bernese\",\n            \"swiss\"\n        ],\n        \"newfoundland\": [],\n        \"otterhound\": [],\n        \"papillon\": [],\n        \"pekinese\": [],\n        \"pembroke\": [],\n        \"pinscher\": [\n            \"miniature\"\n        ],\n        \"pointer\": [\n            \"german\",\n            \"germanlonghair\"\n        ],\n        \"pomeranian\": [],\n        \"poodle\": [\n            \"miniature\",\n            \"standard\",\n            \"toy\"\n        ],\n        \"pug\": [],\n        \"puggle\": [],\n        \"pyrenees\": [],\n        \"redbone\": [],\n        \"retriever\": [\n            \"chesapeake\",\n            \"curly\",\n            \"flatcoated\",\n            \"golden\"\n        ],\n        \"ridgeback\": [\n            \"rhodesian\"\n        ],\n        \"rottweiler\": [],\n        \"saluki\": [],\n        \"samoyed\": [],\n        \"schipperke\": [],\n        \"schnauzer\": [\n            \"giant\",\n            \"miniature\"\n        ],\n        \"setter\": [\n            \"english\",\n            \"gordon\",\n            \"irish\"\n        ],\n        \"sheepdog\": [\n            \"english\",\n            \"shetland\"\n        ],\n        \"shiba\": [],\n        \"shihtzu\": [],\n        \"spaniel\": [\n            \"blenheim\",\n            \"brittany\",\n            \"cocker\",\n            \"irish\",\n            \"japanese\",\n            \"sussex\",\n            \"welsh\"\n        ],\n        \"springer\": [\n            \"english\"\n        ],\n        \"stbernard\": [],\n        \"terrier\": [\n            \"american\",\n            \"australian\",\n            \"bedlington\",\n            \"border\",\n            \"dandie\",\n            \"fox\",\n            \"irish\",\n            \"kerryblue\",\n            \"lakeland\",\n            \"norfolk\",\n            \"norwich\",\n            \"patterdale\",\n            \"russell\",\n            \"scottish\",\n            \"sealyham\",\n            \"silky\",\n            \"tibetan\",\n            \"toy\",\n            \"westhighland\",\n            \"wheaten\",\n            \"yorkshire\"\n        ],\n        \"vizsla\": [],\n        \"weimaraner\": [],\n        \"whippet\": [],\n        \"wolfhound\": [\n            \"irish\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "RetrieverSub-Breeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7a78a38a-32c8-4c35-9e37-0f69d573b89e",
+						"exec": [
+							"pm.test(\"Respose has a message body\", function () {",
+							"    pm.expect(pm.response.message);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/list",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"list"
+					]
+				},
+				"description": "Requests a list of all sub-breeds for Retriever."
+			},
+			"response": [
+				{
+					"name": "RetrieverSub-Breeds",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://dog.ceo/api/breed/retriever/list",
+							"protocol": "https",
+							"host": [
+								"dog",
+								"ceo"
+							],
+							"path": [
+								"api",
+								"breed",
+								"retriever",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 25 Feb 2019 11:31:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.23"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=43200, public"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 varnish (Varnish/6.1), 1.1 varnish (Varnish/6.1)"
+						},
+						{
+							"key": "X-Cache-Hits",
+							"value": "2"
+						},
+						{
+							"key": "X-Cache",
+							"value": "HIT"
+						},
+						{
+							"key": "Age",
+							"value": "7430"
+						},
+						{
+							"key": "Vary",
+							"value": ""
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "4ae9d8fa5d0b804c-CPT"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"chesapeake\",\n        \"curly\",\n        \"flatcoated\",\n        \"golden\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "RandomImage/link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/golden/images/random",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"golden",
+						"images",
+						"random"
+					]
+				},
+				"description": "Response rettrieves a random link/image for the sub-breed \"Golden\""
+			},
+			"response": [
+				{
+					"name": "RandomImage/link",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://dog.ceo/api/breed/retriever/golden/images/random",
+							"protocol": "https",
+							"host": [
+								"dog",
+								"ceo"
+							],
+							"path": [
+								"api",
+								"breed",
+								"retriever",
+								"golden",
+								"images",
+								"random"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 25 Feb 2019 11:40:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.23"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 varnish (Varnish/6.1), 1.1 varnish (Varnish/6.1)"
+						},
+						{
+							"key": "X-Cache-Hits",
+							"value": "0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "Age",
+							"value": "0"
+						},
+						{
+							"key": "Vary",
+							"value": ""
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "4ae9e6697b8b804c-CPT"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"https://images.dog.ceo/breeds/retriever-golden/n02099601_2295.jpg\"\n}"
+				}
+			]
+		}
+	]
+}
