@@ -19,4 +19,5 @@ To View results:
     -Run each request to view response and test scripts
    
   Task 2:
-    - 
+    - Open project in VisualStudio
+	- Open TestExplorer to run all tests
