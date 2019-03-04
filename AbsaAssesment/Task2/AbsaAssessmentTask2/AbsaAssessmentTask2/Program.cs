@@ -16,6 +16,7 @@ namespace AbsaAssessmentTask2
         public void Initialize()
         {
             WebDriver.Driver = new ChromeDriver();
+            WebDriver.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             WebDriver.Driver.Navigate().GoToUrl("http://www.way2automation.com/angularjs-protractor/webtables/");
             Console.WriteLine("URL Opened");
             
@@ -33,7 +34,6 @@ namespace AbsaAssessmentTask2
             WebDriver.Driver.FindElement(By.XPath("/html/body/table/thead/tr[2]/td/button")).Click();
             Console.WriteLine("Open AddUser Form");
 
-            
             Methods.EnterFirstName("FName1");
             Methods.EnterLastName("LName1");
             Methods.EnterUserName("User1");
@@ -47,7 +47,7 @@ namespace AbsaAssessmentTask2
             WebDriver.Driver.FindElement(By.XPath("/html/body/div[3]/div[3]/button[2]")).Click();
             Console.WriteLine("Click Save");
 
-            Assert.Equals(WebDriver.Driver.FindElement(By.XPath("/html/body/table/tbody/tr[1]/td[1]")), "FName1");
+            Assert.AreEqual(WebDriver.Driver.FindElement(By.XPath("/html/body/table/tbody/tr[1]/td[1]")).Text, "FName1");
         }
 
         [Test]
@@ -69,7 +69,7 @@ namespace AbsaAssessmentTask2
             WebDriver.Driver.FindElement(By.XPath("/html/body/div[3]/div[3]/button[2]")).Click();
             Console.WriteLine("Click Save");
             
-            Assert.Equals(WebDriver.Driver.FindElement(By.XPath("/html/body/table/tbody/tr[1]/td[1]")), "FName2");
+            Assert.AreEqual(WebDriver.Driver.FindElement(By.XPath("/html/body/table/tbody/tr[1]/td[1]")).Text, "FName2");
         }
 
         [TearDown]
